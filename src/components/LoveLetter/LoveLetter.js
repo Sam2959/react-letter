@@ -39,15 +39,26 @@ const LoveLetter = () => {
       <div className="flap"></div>
       <div className="body"></div>
       <div className={`letter ${isFullSize ? "fullSize" : ""}`}>
-        mah dear kundanapu bomma🖤,
+        mah dear kundanapu bomma <b>Maggi</b>🖤,
         <br />
-        never have i been so blessed as to fall in love with someone as
-        wonderful as you...
-        <br />i loveeee youuuu :)
         <br />
-        always yours,
+        Wish you a many more happy returns of the day... mah
+        <br />
+        Met you when I was not looking for you,
+        <br />
+        but lost you when I ...... you the most...🙂:)
+        <br />
+        <br />
+        Every rose has its thorns. Show me yours and I'll show you hands willing
+        to bleed.
+        <br />
+        <br />
+        Regards,
+        <br />
+        Yours stranger....
         <br />
         @saaaammmmm
+        <br />
       </div>
       <audio
         ref={audioRef}
