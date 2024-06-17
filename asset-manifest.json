@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react-letter/static/css/main.d28f3c74.css",
-    "main.js": "/react-letter/static/js/main.4e0c236e.js",
+    "main.js": "/react-letter/static/js/main.638a576f.js",
     "static/js/453.c597153d.chunk.js": "/react-letter/static/js/453.c597153d.chunk.js",
     "static/media/The-Love-Bug-Has-Bitten.mp3": "/react-letter/static/media/The-Love-Bug-Has-Bitten.ac3d118257f9429dc86e.mp3",
     "index.html": "/react-letter/index.html",
     "main.d28f3c74.css.map": "/react-letter/static/css/main.d28f3c74.css.map",
-    "main.4e0c236e.js.map": "/react-letter/static/js/main.4e0c236e.js.map",
+    "main.638a576f.js.map": "/react-letter/static/js/main.638a576f.js.map",
     "453.c597153d.chunk.js.map": "/react-letter/static/js/453.c597153d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d28f3c74.css",
-    "static/js/main.4e0c236e.js"
+    "static/js/main.638a576f.js"
   ]
 }
