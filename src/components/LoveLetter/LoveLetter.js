@@ -49,7 +49,7 @@ const LoveLetter = () => {
         <br />
         Met you when I was not looking for you,
         <br />
-        but l*** you when I l....ed you the most...🙂:)
+        but lost you when I l....ed you the most...🙂:)
         <br />
         <br />
         Every rose has its thorns. Show me yours and I'll show you hands willing
