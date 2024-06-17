@@ -43,13 +43,13 @@ const LoveLetter = () => {
         <br />
         <br />
         “Hope your special day brings you all that your heart wishes and
-        desires! Here’s wishing you a day full of happiness!{" "}
+        desires! Here’s wishing you a day full of happiness! and smiles.
         <b>Happy birthday🎂!”... mah</b>
         <br />
         <br />
         Met you when I was not looking for you,
         <br />
-        but lost you when I ...... you the most...🙂:)
+        but l*** you when I l....ed you the most...🙂:)
         <br />
         <br />
         Every rose has its thorns. Show me yours and I'll show you hands willing
