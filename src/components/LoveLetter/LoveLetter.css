@@ -2,8 +2,9 @@
 
 .envelope {
   position: relative;
-  width: 600px;
-  height: 650px;
+  width: 90%;
+  max-width: 600px;
+  height: 450px;
   margin: 50px auto;
   cursor: pointer;
   perspective: 1000px;
@@ -52,8 +53,8 @@
   font-family: "Sedan", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 16px;
+  padding: 10px;
   box-sizing: border-box;
   text-align: justify;
 }
@@ -65,8 +66,20 @@
 
 .letter.fullSize {
   top: 0%;
-  height: 100%; /* Expand to full screen */
+  height: 100%;
   opacity: 1;
   z-index: -2;
-  transform: scale(1); /* Scale up if necessary */
+  transform: scale(1);
+}
+
+/* Media Queries for iPhone 11 */
+@media only screen and (max-width: 828px) {
+  .envelope {
+    height: 350px;
+  }
+
+  .letter {
+    font-size: 14px;
+    padding: 8px;
+  }
 }
