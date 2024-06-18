@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "./LoveLetter.css";
 import audioFile from "./The-Love-Bug-Has-Bitten.mp3";
 
@@ -7,30 +7,17 @@ const LoveLetter = () => {
   const [isFullSize, setIsFullSize] = useState(false);
   const audioRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-      setTimeout(() => {
-        setIsFullSize(true);
-        setTimeout(() => {
-          // Start playing audio 1 second after opening the envelope
-          if (audioRef.current) {
-            audioRef.current
-              .play()
-              .then(() => console.log("Playback succeeded"))
-              .catch((e) => console.error("Playback failed:", e));
-          }
-        }, 1000); // 1 second delay after opening the envelope
-      }, 800); // 800ms delay after opening the envelope
-    }, 1000); // 1 second delay
-
-    return () => clearTimeout(timer);
-  }, []); // This effect will run only once, on component mount
-
   const handleOpenLetter = () => {
     setIsOpen(true);
     setTimeout(() => {
       setIsFullSize(true);
+      // Ensuring audio play is directly a result of this user interaction
+      if (audioRef.current) {
+        audioRef.current
+          .play()
+          .then(() => console.log("Playback succeeded"))
+          .catch((e) => console.error("Playback failed:", e));
+      }
     }, 800);
   };
 
