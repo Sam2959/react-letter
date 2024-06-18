@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./LoveLetter.css";
 import audioFile from "./The-Love-Bug-Has-Bitten.mp3";
 
@@ -6,6 +6,14 @@ const LoveLetter = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isFullSize, setIsFullSize] = useState(false);
   const audioRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleOpenLetter();
+    }, 1000); // Open the envelope after 1 second (1000 milliseconds)
+
+    return () => clearTimeout(timer); // Clean up the timer on unmount
+  }, []);
 
   const handleOpenLetter = () => {
     setIsOpen(true);
@@ -42,9 +50,9 @@ const LoveLetter = () => {
         mah dear kundanapu bomma <b>Maggi</b>❤️,
         <br />
         <br />
-        “Hope your special day brings you all that your heart wishes and
-        desires! Here’s wishing you a day full of happiness! and smiles.
-        <b>Happy birthday🎂!”... mah</b>
+        "Hope your special day brings you all that your heart wishes and
+        desires! Here's wishing you a day full of happiness! and smiles.
+        <b>Happy birthday🎂!"... mah</b>
         <br />
         <br />
         Met you when I was not looking for you,
