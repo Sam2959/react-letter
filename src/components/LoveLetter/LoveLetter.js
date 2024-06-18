@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./LoveLetter.css";
 import audioFile from "./The-Love-Bug-Has-Bitten.mp3";
 
@@ -7,17 +7,29 @@ const LoveLetter = () => {
   const [isFullSize, setIsFullSize] = useState(false);
   const audioRef = useRef(null);
 
-  const handleOpenLetter = () => {
-    setIsOpen(true);
-    setTimeout(() => {
-      setIsFullSize(true);
-      // Ensuring audio play is directly a result of this user interaction
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+      setTimeout(() => {
+        setIsFullSize(true);
+      }, 800); // 800ms delay after opening the envelope
+
+      // Start playing audio after 1 second
       if (audioRef.current) {
         audioRef.current
           .play()
           .then(() => console.log("Playback succeeded"))
           .catch((e) => console.error("Playback failed:", e));
       }
+    }, 1000); // 1 second delay
+
+    return () => clearTimeout(timer);
+  }, []); // This effect will run only once, on component mount
+
+  const handleOpenLetter = () => {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsFullSize(true);
     }, 800);
   };
 
@@ -42,9 +54,9 @@ const LoveLetter = () => {
         mah dear kundanapu bomma <b>Maggi</b>❤️,
         <br />
         <br />
-        “Hope your special day brings you all that your heart wishes and
-        desires! Here’s wishing you a day full of happiness! and smiles.
-        <b>Happy birthday🎂!”... mah</b>
+        "Hope your special day brings you all that your heart wishes and
+        desires! Here's wishing you a day full of happiness! and smiles.
+        <b>Happy birthday🎂!"... mah</b>
         <br />
         <br />
         Met you when I was not looking for you,
