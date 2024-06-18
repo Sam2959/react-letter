@@ -12,15 +12,16 @@ const LoveLetter = () => {
       setIsOpen(true);
       setTimeout(() => {
         setIsFullSize(true);
+        setTimeout(() => {
+          // Start playing audio 1 second after opening the envelope
+          if (audioRef.current) {
+            audioRef.current
+              .play()
+              .then(() => console.log("Playback succeeded"))
+              .catch((e) => console.error("Playback failed:", e));
+          }
+        }, 1000); // 1 second delay after opening the envelope
       }, 800); // 800ms delay after opening the envelope
-
-      // Start playing audio after 1 second
-      if (audioRef.current) {
-        audioRef.current
-          .play()
-          .then(() => console.log("Playback succeeded"))
-          .catch((e) => console.error("Playback failed:", e));
-      }
     }, 1000); // 1 second delay
 
     return () => clearTimeout(timer);
